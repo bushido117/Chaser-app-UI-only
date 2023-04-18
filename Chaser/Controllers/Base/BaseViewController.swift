@@ -17,11 +17,17 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         configure()
+        addSubviews()
+        setupConstraints()
     }
     
-    private func configure() {
+    func configure() {
         view.backgroundColor = .background
     }
+    
+    func addSubviews() {}
+    
+    func setupConstraints() {}
     
     func addNavBarButton(at position: NavBarButtonPosition, with title: String) {
         let button = UIButton(type: .system)

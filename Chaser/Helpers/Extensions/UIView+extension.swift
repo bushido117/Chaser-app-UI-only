@@ -15,4 +15,21 @@ extension UIView {
         border.frame = CGRect(x: 0, y: frame.height - height, width: frame.width, height: height)
         addSubview(border)
     }
+    
+    func customButtonToSystem(button: UIButton) {
+        button.addTarget(self, action: #selector(tapIn), for: .touchDown)
+        button.addTarget(self, action: #selector(tapOut), for: .touchUpInside)
+    }
+    
+    @objc func tapIn() {
+        UIView.animate(withDuration: 0.25) {
+            self.alpha = 0.55
+        }
+    }
+    
+    @objc func tapOut() {
+        UIView.animate(withDuration: 0.25) {
+            self.alpha = 1
+        }
+    }
 }

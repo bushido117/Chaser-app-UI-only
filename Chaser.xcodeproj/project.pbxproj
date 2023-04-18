@@ -14,6 +14,11 @@
 		72B4B5252916F13F009745B3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4B5242916F13F009745B3 /* BaseViewController.swift */; };
 		72B4B52A2916F141009745B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B4B5292916F141009745B3 /* Assets.xcassets */; };
 		72B4B52D2916F141009745B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B4B52B2916F141009745B3 /* LaunchScreen.storyboard */; };
+		72B4E59829ED3DB80082972A /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E59729ED3DB80082972A /* SecondaryButton.swift */; };
+		72B4E59A29EE679D0082972A /* OverviewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E59929EE679D0082972A /* OverviewNavBar.swift */; };
+		72B4E59C29EE8A390082972A /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E59B29EE8A380082972A /* WeekView.swift */; };
+		72B4E59E29EE8F670082972A /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E59D29EE8F670082972A /* WeekdayView.swift */; };
+		72B4E5A029EE9BEE0082972A /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E59F29EE9BEE0082972A /* Date+extension.swift */; };
 		72BC585C29ED2C4100D8B09A /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BC585B29ED2C4100D8B09A /* NavBarController.swift */; };
 		72BC585E29ED2CAD00D8B09A /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BC585D29ED2CAD00D8B09A /* UIFont+extension.swift */; };
 		72BC586029ED2D4500D8B09A /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BC585F29ED2D4500D8B09A /* OverviewController.swift */; };
@@ -33,6 +38,11 @@
 		72B4B5292916F141009745B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B4B52C2916F141009745B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72B4B52E2916F141009745B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B4E59729ED3DB80082972A /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		72B4E59929EE679D0082972A /* OverviewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavBar.swift; sourceTree = "<group>"; };
+		72B4E59B29EE8A380082972A /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		72B4E59D29EE8F670082972A /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
+		72B4E59F29EE9BEE0082972A /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		72BC585B29ED2C4100D8B09A /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		72BC585D29ED2CAD00D8B09A /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
 		72BC585F29ED2D4500D8B09A /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
@@ -85,6 +95,7 @@
 			children = (
 				725B581F295378B100E2BE34 /* UIColor+extension.swift */,
 				72BC585D29ED2CAD00D8B09A /* UIFont+extension.swift */,
+				72B4E59F29EE9BEE0082972A /* Date+extension.swift */,
 				72BC586729ED2E3200D8B09A /* UIView+extension.swift */,
 			);
 			path = Extensions;
@@ -110,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				725B581A295376E000E2BE34 /* Application */,
+				72BC586929ED3D5700D8B09A /* Views */,
 				72BC585929ED2BF100D8B09A /* Controllers */,
 				725B581E2953789400E2BE34 /* Helpers */,
 				725B581B2953770B00E2BE34 /* Support files */,
@@ -137,6 +149,25 @@
 				72BC585B29ED2C4100D8B09A /* NavBarController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		72BC586929ED3D5700D8B09A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72BC586A29ED3D6200D8B09A /* OverviewViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		72BC586A29ED3D6200D8B09A /* OverviewViews */ = {
+			isa = PBXGroup;
+			children = (
+				72B4E59729ED3DB80082972A /* SecondaryButton.swift */,
+				72B4E59929EE679D0082972A /* OverviewNavBar.swift */,
+				72B4E59B29EE8A380082972A /* WeekView.swift */,
+				72B4E59D29EE8F670082972A /* WeekdayView.swift */,
+			);
+			path = OverviewViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,11 +241,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B4B5252916F13F009745B3 /* BaseViewController.swift in Sources */,
+				72B4E59E29EE8F670082972A /* WeekdayView.swift in Sources */,
 				72BC585C29ED2C4100D8B09A /* NavBarController.swift in Sources */,
+				72B4E59A29EE679D0082972A /* OverviewNavBar.swift in Sources */,
 				725B581D2953782400E2BE34 /* TabBarController.swift in Sources */,
 				725B5820295378B100E2BE34 /* UIColor+extension.swift in Sources */,
 				72BC586429ED2D6B00D8B09A /* SessionController.swift in Sources */,
+				72B4E59C29EE8A390082972A /* WeekView.swift in Sources */,
 				72BC586629ED2D7800D8B09A /* SettingsController.swift in Sources */,
+				72B4E5A029EE9BEE0082972A /* Date+extension.swift in Sources */,
+				72B4E59829ED3DB80082972A /* SecondaryButton.swift in Sources */,
 				72BC586829ED2E3200D8B09A /* UIView+extension.swift in Sources */,
 				72BC585E29ED2CAD00D8B09A /* UIFont+extension.swift in Sources */,
 				72BC586229ED2D5A00D8B09A /* ProgressController.swift in Sources */,
