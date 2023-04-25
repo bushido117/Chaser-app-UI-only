@@ -31,6 +31,8 @@
 		72E89E3B29F10A8F008424E2 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E3A29F10A8F008424E2 /* TimerView.swift */; };
 		72E89E3E29F10B71008424E2 /* TimerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E3D29F10B71008424E2 /* TimerProgressView.swift */; };
 		72E89E4029F7B68A008424E2 /* TimerPercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E3F29F7B68A008424E2 /* TimerPercentView.swift */; };
+		72E89E4529F7C9DB008424E2 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E4429F7C9DB008424E2 /* StatsView.swift */; };
+		72E89E4729F7CA7D008424E2 /* StatsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E4629F7CA7D008424E2 /* StatsItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		72E89E3A29F10A8F008424E2 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		72E89E3D29F10B71008424E2 /* TimerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressView.swift; sourceTree = "<group>"; };
 		72E89E3F29F7B68A008424E2 /* TimerPercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPercentView.swift; sourceTree = "<group>"; };
+		72E89E4429F7C9DB008424E2 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		72E89E4629F7CA7D008424E2 /* StatsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +146,7 @@
 		72B4E5A129EFBDAE0082972A /* SessionViews */ = {
 			isa = PBXGroup;
 			children = (
-				72E89E3A29F10A8F008424E2 /* TimerView.swift */,
-				72E89E3D29F10B71008424E2 /* TimerProgressView.swift */,
-				72E89E3F29F7B68A008424E2 /* TimerPercentView.swift */,
+				72E89E4129F7C523008424E2 /* Timer */,
 			);
 			path = SessionViews;
 			sourceTree = "<group>";
@@ -177,6 +179,8 @@
 				72E89E3C29F10A95008424E2 /* Base */,
 				72BC586A29ED3D6200D8B09A /* OverviewViews */,
 				72B4E5A129EFBDAE0082972A /* SessionViews */,
+				72E89E4229F7C52E008424E2 /* Stats */,
+				72E89E4329F7C734008424E2 /* Steps */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +203,32 @@
 				72E89E3829EFD5A6008424E2 /* BaseInfoViewButton.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		72E89E4129F7C523008424E2 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				72E89E3A29F10A8F008424E2 /* TimerView.swift */,
+				72E89E3D29F10B71008424E2 /* TimerProgressView.swift */,
+				72E89E3F29F7B68A008424E2 /* TimerPercentView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		72E89E4229F7C52E008424E2 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				72E89E4429F7C9DB008424E2 /* StatsView.swift */,
+				72E89E4629F7CA7D008424E2 /* StatsItemView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		72E89E4329F7C734008424E2 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,11 +316,13 @@
 				72BC586629ED2D7800D8B09A /* SettingsController.swift in Sources */,
 				72B4E5A029EE9BEE0082972A /* Date+extension.swift in Sources */,
 				72B4E59829ED3DB80082972A /* SecondaryButton.swift in Sources */,
+				72E89E4729F7CA7D008424E2 /* StatsItemView.swift in Sources */,
 				72BC586829ED2E3200D8B09A /* UIView+extension.swift in Sources */,
 				72E89E4029F7B68A008424E2 /* TimerPercentView.swift in Sources */,
 				72BC585E29ED2CAD00D8B09A /* UIFont+extension.swift in Sources */,
 				72BC586229ED2D5A00D8B09A /* ProgressController.swift in Sources */,
 				72B4B5212916F13F009745B3 /* AppDelegate.swift in Sources */,
+				72E89E4529F7C9DB008424E2 /* StatsView.swift in Sources */,
 				72BC586029ED2D4500D8B09A /* OverviewController.swift in Sources */,
 				72B4B5232916F13F009745B3 /* SceneDelegate.swift in Sources */,
 			);

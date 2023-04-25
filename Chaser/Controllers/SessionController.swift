@@ -15,12 +15,26 @@ class SessionController: BaseViewController {
         return view
     }()
     
+    private lazy var statsView: StatsView = {
+        let view = StatsView(title: "Workout stats".uppercased())
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var stepsView: BaseInfoView = {
+        let view = BaseInfoView(title: "Steps counter".uppercased())
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private let timerDuration = 10.0
     
     override func addSubviews() {
         super.addSubviews()
         
         view.addSubview(timerView)
+        view.addSubview(statsView)
+        view.addSubview(stepsView)
     }
 
     override func setupConstraints() {
@@ -29,7 +43,16 @@ class SessionController: BaseViewController {
         NSLayoutConstraint.activate([
             timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
+            timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            
+            statsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 11),
+            statsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            statsView.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -7.5),
+            
+            stepsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 11),
+            stepsView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 7.5),
+            stepsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            stepsView.heightAnchor.constraint(equalToConstant: 100),
         ])
     }
 

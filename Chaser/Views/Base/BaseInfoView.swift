@@ -23,7 +23,7 @@ class BaseInfoView: UIView {
         return button
     }()
     
-    private lazy var contentView: UIView = {
+    lazy var contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.borderColor = UIColor.separator.cgColor
