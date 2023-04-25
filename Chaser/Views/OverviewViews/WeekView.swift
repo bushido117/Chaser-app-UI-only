@@ -9,7 +9,13 @@ import UIKit
 
 final class WeekView: UIView {
     
-    private lazy var stackView = UIStackView()
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 7
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,10 +30,6 @@ final class WeekView: UIView {
     }
     
     private func configure() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = 7
-        stackView.distribution = .fillEqually
-        
         let calendar = Calendar.current
         var weekdays = calendar.shortStandaloneWeekdaySymbols
         if calendar.firstWeekday == 1 {

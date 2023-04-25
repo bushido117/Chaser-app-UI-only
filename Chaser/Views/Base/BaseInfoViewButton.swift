@@ -1,19 +1,19 @@
 //
-//  SecondaryButton.swift
+//  BaseInfoViewButton.swift
 //  Chaser
 //
-//  Created by Вадим Сайко on 17.04.23.
+//  Created by Вадим Сайко on 19.04.23.
 //
 
 import UIKit
 
-final class SecondaryButton: UIButton {
+final class BaseInfoViewButton: UIButton {
     
     private lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.helveticaRegular(with: 15)
-        label.textColor = UIColor.active
+        label.font = UIFont.helveticaRegular(with: 13)
+        label.textColor = UIColor.inactive
         label.textAlignment = .center
         return label
     }()
@@ -21,7 +21,7 @@ final class SecondaryButton: UIButton {
         let iconView = UIImageView()
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.image = UIImage(systemName: "chevron.down")
-        iconView.tintColor = UIColor.active
+        iconView.tintColor = UIColor.inactive
         return iconView
     }()
     
@@ -38,8 +38,6 @@ final class SecondaryButton: UIButton {
     }
     
     private func configure() {
-        backgroundColor = .secondaryBackground
-        layer.cornerRadius = 14
         customButtonToSystem(button: self)
     }
     
@@ -51,13 +49,13 @@ final class SecondaryButton: UIButton {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            iconView.trailingAnchor.constraint(equalTo: trailingAnchor),
             iconView.heightAnchor.constraint(equalToConstant: 5),
             iconView.widthAnchor.constraint(equalToConstant: 10),
             
             label.centerYAnchor.constraint(equalTo: centerYAnchor),
-            label.trailingAnchor.constraint(equalTo: iconView.leadingAnchor),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            label.trailingAnchor.constraint(equalTo: iconView.leadingAnchor, constant: -5),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor),
         ])
     }
     

@@ -9,19 +9,34 @@ import UIKit
 
 final class WeekdayView: UIView {
     
-    private lazy var nameLabel = UILabel()
-    private lazy var dateLabel = UILabel()
-    private lazy var stackView = UIStackView()
+    private lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.helveticaRegular(with: 9)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private lazy var dateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.helveticaRegular(with: 15)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 3
+        stackView.axis = .vertical
+        return stackView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubview(stackView)
-        stackView.addArrangedSubview(nameLabel)
-        stackView.addArrangedSubview(dateLabel)
         configure()
+        addSubviews()
         setupConstraints()
-
     }
     
     required init?(coder: NSCoder) {
@@ -29,15 +44,14 @@ final class WeekdayView: UIView {
     }
     
     private func configure() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = 3
-        stackView.axis = .vertical
-        nameLabel.font = UIFont.helveticaRegular(with: 9)
-        nameLabel.textAlignment = .center
-        dateLabel.font = UIFont.helveticaRegular(with: 15)
-        dateLabel.textAlignment = .center
         layer.cornerRadius = 5
         layer.masksToBounds = true
+    }
+    
+    private func addSubviews() {
+        addSubview(stackView)
+        stackView.addArrangedSubview(nameLabel)
+        stackView.addArrangedSubview(dateLabel)
     }
     
     private func setupConstraints() {
@@ -49,11 +63,8 @@ final class WeekdayView: UIView {
     
     func configureStackView(index: Int, name: String) {
         let startOfWeek = Date().startOfWeek
-//        print(startOfWeek)
         let currentDay = startOfWeek.agoForward(to: index)
-        print(currentDay)
         let day = Calendar.current.component(.day, from: currentDay)
-//        print(day)
         let isTooday = currentDay.stripTime() == Date().stripTime()
         backgroundColor = isTooday ? .active : .background
         nameLabel.textColor = isTooday ? .white : .inactive

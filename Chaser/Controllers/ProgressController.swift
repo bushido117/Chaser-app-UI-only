@@ -8,10 +8,10 @@
 import UIKit
 
 class ProgressController: BaseViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    override func configure() {
+        super.configure()
+        
         navigationItem.title = "Workout Progress"
         addNavBarButton(at: .left, with: "Export")
         addNavBarButton(at: .right, with: "Details")

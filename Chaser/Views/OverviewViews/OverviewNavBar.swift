@@ -9,19 +9,44 @@ import UIKit
 
 final class OverviewNavBar: UIView {
     
-    private lazy var allWarkoutsButton = SecondaryButton()
-    private lazy var addButton = UIButton()
-    private lazy var titleLabel = UILabel()
-    private lazy var weekView = WeekView()
+    private lazy var allWarkoutsButton: SecondaryButton = {
+        let button = SecondaryButton()
+        button.setTitle(title: "All workouts")
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(allWorkoutsButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        let config = UIImage.SymbolConfiguration(textStyle: .title1)
+        let buttonImage = UIImage(systemName: "plus.circle", withConfiguration: config)
+        button.setImage(buttonImage, for: .normal)
+        button.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.helveticaRegular(with: 22)
+        label.text = "Today"
+        label.textColor = .darkGray
+        return label
+    }()
+    
+    private lazy var weekView: WeekView = {
+        let view = WeekView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         configure()
-        addSubview(allWarkoutsButton)
-        addSubview(addButton)
-        addSubview(titleLabel)
-        addSubview(weekView)
+        addSubviews()
         setupConstraints()
     }
     
@@ -34,27 +59,15 @@ final class OverviewNavBar: UIView {
         
         addBottomBorder(with: .separator, of: 1)
     }
+    private func addSubviews() {
+        addSubview(allWarkoutsButton)
+        addSubview(addButton)
+        addSubview(titleLabel)
+        addSubview(weekView)
+    }
     
     private func configure() {
         backgroundColor = .white
-        
-        allWarkoutsButton.setTitle(title: "All workouts")
-        allWarkoutsButton.translatesAutoresizingMaskIntoConstraints = false
-        allWarkoutsButton.addTarget(self, action: #selector(allWorkoutsButtonTapped), for: .touchUpInside)
-        
-        addButton.translatesAutoresizingMaskIntoConstraints = false
-        let config = UIImage.SymbolConfiguration(textStyle: .title1)
-        let buttonImage = UIImage(systemName: "plus.circle", withConfiguration: config)
-        addButton.setImage(buttonImage, for: .normal)
-//        addButton.backgroundColor = .systemBlue
-        addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.font = UIFont.helveticaRegular(with: 22)
-        titleLabel.text = "Today"
-        titleLabel.textColor = .darkGray
-        
-        weekView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func setupConstraints() {

@@ -9,13 +9,11 @@ import UIKit
 
 class OverviewController: BaseViewController {
     
-    private lazy var overviewNavBar = OverviewNavBar()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
+    private lazy var overviewNavBar: OverviewNavBar = {
+        let navBar = OverviewNavBar()
+        navBar.translatesAutoresizingMaskIntoConstraints = false
+        return navBar
+    }()
 
     override func addSubviews() {
         super.addSubviews()
@@ -30,7 +28,6 @@ class OverviewController: BaseViewController {
             overviewNavBar.topAnchor.constraint(equalTo: view.topAnchor),
             overviewNavBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             overviewNavBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            overviewNavBar.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
     
@@ -38,6 +35,5 @@ class OverviewController: BaseViewController {
         super.configure()
         
         navigationController?.navigationBar.isHidden = true
-        overviewNavBar.translatesAutoresizingMaskIntoConstraints = false
     }
 }
