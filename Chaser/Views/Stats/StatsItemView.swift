@@ -38,11 +38,14 @@ final class StatsItemView: UIView {
         return stackView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    init(imageName: String, value: String, title: String) {
+        super.init(frame: .zero)
+        imageView.image = UIImage(named: imageName)
+        valueLabel.text = value
+        titleLabel.text = title.uppercased()
         addSubviews()
         setupConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -54,12 +57,6 @@ final class StatsItemView: UIView {
         addSubview(labelStackView)
         labelStackView.addArrangedSubview(valueLabel)
         labelStackView.addArrangedSubview(titleLabel)
-    }
-    
-    func configureItem(with imageName: String, value: String, title: String) {
-        imageView.image = UIImage(named: imageName)
-        valueLabel.text = value
-        titleLabel.text = title.uppercased()
     }
     
     private func setupConstraints() {

@@ -21,8 +21,8 @@ class SessionController: BaseViewController {
         return view
     }()
     
-    private lazy var stepsView: BaseInfoView = {
-        let view = BaseInfoView(title: "Steps counter".uppercased())
+    private lazy var stepsView: StepsView = {
+        let view = StepsView(title: "Steps counter".uppercased())
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -52,7 +52,7 @@ class SessionController: BaseViewController {
             stepsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 11),
             stepsView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 7.5),
             stepsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            stepsView.heightAnchor.constraint(equalToConstant: 100),
+            stepsView.heightAnchor.constraint(equalTo: statsView.heightAnchor),
         ])
     }
 

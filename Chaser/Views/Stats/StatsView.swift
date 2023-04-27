@@ -17,10 +17,10 @@ final class StatsView: BaseInfoView {
         return stackView
     }()
     
-    private lazy var heartStatsItem = StatsItemView()
-    private lazy var paceStatsItem = StatsItemView()
-    private lazy var stepsStatsItem = StatsItemView()
-    private lazy var distanceStatsItem = StatsItemView()
+    private lazy var heartStatsItem = StatsItemView(imageName: "stats_heartRate", value: "155 bpm", title: "heart rate")
+    private lazy var paceStatsItem = StatsItemView(imageName: "stats_averagePace", value: "8'2'' / km", title: "Average pace")
+    private lazy var stepsStatsItem = StatsItemView(imageName: "stats_totalSteps", value: "7,682", title: "Total steps")
+    private lazy var distanceStatsItem = StatsItemView(imageName: "stats_totalDistance", value: "8.25 km", title: "Total distance")
     
     override func addSubviews() {
         super.addSubviews()
@@ -40,16 +40,6 @@ final class StatsView: BaseInfoView {
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 18),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -18),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            
         ])
-    }
-    
-    override func configure() {
-        super.configure()
-        
-        heartStatsItem.configureItem(with: "stats_heartRate", value: "155 bpm", title: "Heart rate")
-        paceStatsItem.configureItem(with: "stats_averagePace", value: "8'2'' / km", title: "Average pace")
-        stepsStatsItem.configureItem(with: "stats_totalSteps", value: "7,682", title: "Total steps")
-        distanceStatsItem.configureItem(with: "stats_totalDistance", value: "8.25 km", title: "Total distance")
     }
 }
