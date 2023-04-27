@@ -96,7 +96,7 @@ class TimerView: BaseInfoView {
             progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             progressView.heightAnchor.constraint(equalTo: progressView.widthAnchor),
-            progressView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            progressView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
             
             timerStackView.centerXAnchor.constraint(equalTo: progressView.centerXAnchor),
             timerStackView.centerYAnchor.constraint(equalTo: progressView.centerYAnchor),
@@ -115,11 +115,11 @@ class TimerView: BaseInfoView {
         
         addSubview(progressView)
         addSubview(timerStackView)
+        addSubview(bottomStackView)
         timerStackView.addArrangedSubview(elapsedTimeLabel)
         timerStackView.addArrangedSubview(elapsedTimeValueLabel)
         timerStackView.addArrangedSubview(remainingTimeLabel)
         timerStackView.addArrangedSubview(remainingTimeValueLabel)
-        addSubview(bottomStackView)
         bottomStackView.addArrangedSubview(completedPercentView)
         bottomStackView.addArrangedSubview(bottomSeparatorView)
         bottomStackView.addArrangedSubview(remainingPercentView)

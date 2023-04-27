@@ -35,6 +35,7 @@
 		72E89E4729F7CA7D008424E2 /* StatsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E4629F7CA7D008424E2 /* StatsItemView.swift */; };
 		72E89E4929FA4A55008424E2 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E4829FA4A55008424E2 /* StepsView.swift */; };
 		72E89E4B29FA50D7008424E2 /* BaseBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E4A29FA50D7008424E2 /* BaseBarView.swift */; };
+		72E89E4F29FA608F008424E2 /* DailyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E4E29FA608F008424E2 /* DailyPerformanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		72E89E4629F7CA7D008424E2 /* StatsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsItemView.swift; sourceTree = "<group>"; };
 		72E89E4829FA4A55008424E2 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
 		72E89E4A29FA50D7008424E2 /* BaseBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBarView.swift; sourceTree = "<group>"; };
+		72E89E4E29FA608F008424E2 /* DailyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPerformanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				72E89E4129F7C523008424E2 /* Timer */,
+				72E89E4229F7C52E008424E2 /* Stats */,
+				72E89E4329F7C734008424E2 /* Steps */,
 			);
 			path = SessionViews;
 			sourceTree = "<group>";
@@ -183,8 +187,7 @@
 				72E89E3C29F10A95008424E2 /* Base */,
 				72BC586A29ED3D6200D8B09A /* OverviewViews */,
 				72B4E5A129EFBDAE0082972A /* SessionViews */,
-				72E89E4229F7C52E008424E2 /* Stats */,
-				72E89E4329F7C734008424E2 /* Steps */,
+				72E89E4C29FA5FD8008424E2 /* ProgressViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +238,22 @@
 				72E89E4829FA4A55008424E2 /* StepsView.swift */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		72E89E4C29FA5FD8008424E2 /* ProgressViews */ = {
+			isa = PBXGroup;
+			children = (
+				72E89E4D29FA603D008424E2 /* DailyPerformance */,
+			);
+			path = ProgressViews;
+			sourceTree = "<group>";
+		};
+		72E89E4D29FA603D008424E2 /* DailyPerformance */ = {
+			isa = PBXGroup;
+			children = (
+				72E89E4E29FA608F008424E2 /* DailyPerformanceView.swift */,
+			);
+			path = DailyPerformance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +330,7 @@
 				72B4E5A329EFC2530082972A /* BaseInfoView.swift in Sources */,
 				72B4E59E29EE8F670082972A /* WeekdayView.swift in Sources */,
 				72BC585C29ED2C4100D8B09A /* NavBarController.swift in Sources */,
+				72E89E4F29FA608F008424E2 /* DailyPerformanceView.swift in Sources */,
 				72B4E59A29EE679D0082972A /* OverviewNavBar.swift in Sources */,
 				725B581D2953782400E2BE34 /* TabBarController.swift in Sources */,
 				725B5820295378B100E2BE34 /* UIColor+extension.swift in Sources */,
