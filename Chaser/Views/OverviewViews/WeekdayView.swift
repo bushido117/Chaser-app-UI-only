@@ -64,7 +64,7 @@ final class WeekdayView: UIView {
     func configureStackView(index: Int, name: String) {
         let startOfWeek = Date().startOfWeek
         let currentDay = startOfWeek.agoForward(to: index)
-        let day = Calendar.current.component(.day, from: currentDay)
+        let day = Date.calendar.component(.day, from: currentDay)
         let isTooday = currentDay.stripTime() == Date().stripTime()
         backgroundColor = isTooday ? .active : .background
         nameLabel.textColor = isTooday ? .white : .inactive

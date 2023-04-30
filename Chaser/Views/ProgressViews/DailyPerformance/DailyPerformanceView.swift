@@ -47,5 +47,4 @@ final class DailyPerformanceView: BaseInfoView {
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
     }
-    
 }

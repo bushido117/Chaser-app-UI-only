@@ -40,8 +40,8 @@ class BaseInfoView: UIView {
         titleLabel.textAlignment = buttonTitle == nil ? .center : .left
         button.setTitle(title: buttonTitle?.uppercased() ?? "")
         button.isHidden = buttonTitle == nil ? true : false
-        configure()
         addSubviews()
+        configure()
         setupConstraints()
     }
     
