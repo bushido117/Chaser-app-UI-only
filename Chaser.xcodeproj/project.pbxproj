@@ -40,6 +40,9 @@
 		72E89E5429FCF8D0008424E2 /* YAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E5329FCF8D0008424E2 /* YAxisView.swift */; };
 		72E89E5629FCF8DE008424E2 /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E5529FCF8DE008424E2 /* XAxisView.swift */; };
 		72E89E5829FD00CC008424E2 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E5729FD00CC008424E2 /* ChartView.swift */; };
+		72E89E5C29FE4673008424E2 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E5B29FE4673008424E2 /* SectionHeaderView.swift */; };
+		72E89E5E29FF9EE5008424E2 /* OverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E5D29FF9EE5008424E2 /* OverviewCollectionViewCell.swift */; };
+		72E89E622A00DA21008424E2 /* OverviewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E89E612A00DA21008424E2 /* OverviewCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		72E89E5329FCF8D0008424E2 /* YAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAxisView.swift; sourceTree = "<group>"; };
 		72E89E5529FCF8DE008424E2 /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisView.swift; sourceTree = "<group>"; };
 		72E89E5729FD00CC008424E2 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		72E89E5B29FE4673008424E2 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		72E89E5D29FF9EE5008424E2 /* OverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		72E89E612A00DA21008424E2 /* OverviewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		72B4B51F2916F13F009745B3 /* Chaser */ = {
 			isa = PBXGroup;
 			children = (
+				72E89E5F2A00D9FB008424E2 /* Models */,
 				725B581A295376E000E2BE34 /* Application */,
 				72BC586929ED3D5700D8B09A /* Views */,
 				72BC585929ED2BF100D8B09A /* Controllers */,
@@ -203,10 +210,8 @@
 		72BC586A29ED3D6200D8B09A /* OverviewViews */ = {
 			isa = PBXGroup;
 			children = (
-				72B4E59729ED3DB80082972A /* SecondaryButton.swift */,
-				72B4E59929EE679D0082972A /* OverviewNavBar.swift */,
-				72B4E59B29EE8A380082972A /* WeekView.swift */,
-				72B4E59D29EE8F670082972A /* WeekdayView.swift */,
+				72E89E5929FE45F2008424E2 /* NavBar */,
+				72E89E5A29FE460A008424E2 /* CollectionView */,
 			);
 			path = OverviewViews;
 			sourceTree = "<group>";
@@ -274,6 +279,34 @@
 				72E89E5729FD00CC008424E2 /* ChartView.swift */,
 			);
 			path = MonthlyPerformance;
+			sourceTree = "<group>";
+		};
+		72E89E5929FE45F2008424E2 /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				72B4E59729ED3DB80082972A /* SecondaryButton.swift */,
+				72B4E59929EE679D0082972A /* OverviewNavBar.swift */,
+				72B4E59B29EE8A380082972A /* WeekView.swift */,
+				72B4E59D29EE8F670082972A /* WeekdayView.swift */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
+		72E89E5A29FE460A008424E2 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				72E89E5B29FE4673008424E2 /* SectionHeaderView.swift */,
+				72E89E5D29FF9EE5008424E2 /* OverviewCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		72E89E5F2A00D9FB008424E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72E89E612A00DA21008424E2 /* OverviewCellModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +390,7 @@
 				72E89E5629FCF8DE008424E2 /* XAxisView.swift in Sources */,
 				72E89E5829FD00CC008424E2 /* ChartView.swift in Sources */,
 				725B5820295378B100E2BE34 /* UIColor+extension.swift in Sources */,
+				72E89E5C29FE4673008424E2 /* SectionHeaderView.swift in Sources */,
 				72BC586429ED2D6B00D8B09A /* SessionController.swift in Sources */,
 				72B4E59C29EE8A390082972A /* WeekView.swift in Sources */,
 				72E89E5429FCF8D0008424E2 /* YAxisView.swift in Sources */,
@@ -370,6 +404,8 @@
 				72B4E59829ED3DB80082972A /* SecondaryButton.swift in Sources */,
 				72E89E4729F7CA7D008424E2 /* StatsItemView.swift in Sources */,
 				72BC586829ED2E3200D8B09A /* UIView+extension.swift in Sources */,
+				72E89E5E29FF9EE5008424E2 /* OverviewCollectionViewCell.swift in Sources */,
+				72E89E622A00DA21008424E2 /* OverviewCellModel.swift in Sources */,
 				72E89E4029F7B68A008424E2 /* TimerPercentView.swift in Sources */,
 				72BC585E29ED2CAD00D8B09A /* UIFont+extension.swift in Sources */,
 				72BC586229ED2D5A00D8B09A /* ProgressController.swift in Sources */,

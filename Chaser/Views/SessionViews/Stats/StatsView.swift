@@ -13,7 +13,7 @@ final class StatsView: BaseInfoView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 15
+        stackView.spacing = 20
         return stackView
     }()
     

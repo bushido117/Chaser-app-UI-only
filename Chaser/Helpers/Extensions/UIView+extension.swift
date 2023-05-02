@@ -93,4 +93,15 @@ extension UIView {
         layer.addSublayer(dotLayer)
         
     }
+    
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        
+        let cornerLayer = CAShapeLayer()
+        cornerLayer.path = path.cgPath
+        cornerLayer.strokeColor = UIColor.separator.cgColor
+        cornerLayer.fillColor = UIColor.clear.cgColor
+        cornerLayer.lineWidth = 1
+        layer.addSublayer(cornerLayer)
+    }
 }
